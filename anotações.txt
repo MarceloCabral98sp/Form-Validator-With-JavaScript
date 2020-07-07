@@ -1,0 +1,22 @@
+Funções callback: função que será executada quando algum evento acontecer, ou algum código chegar a algum
+		  estado que era desejado.
+		  Funções callback são assíncronas(não são executadas de imediato), esperam o momento de
+		  sua execução.
+
+
+Arrow functions: Maneira mais fácil de escrever funções anônimas
+
+const func = (param) => {
+	...
+}
+
+const func2 = (valor) => valor * 2;
+
+
+Event.preventDefault();  >>> Cancela o evento se o mesmo for cancelável.
+			     Se não for usado em um formulário, ao inserir um input e abertar um button
+		             a página atualiza.
+
+
+O método trim() retorna o texto sem os espaços em branco no início e fim do texto.
+O trim() não afeta o valor do texto em si.
