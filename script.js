@@ -18,11 +18,6 @@ function showError(input, msg){
     small.innerHTML = msg;
 }
 
-function getFieldName(input){
-
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
-
 // Checar se campos estão vazios
 function checkFields(inputArr){
 
@@ -38,10 +33,7 @@ function checkFields(inputArr){
 }
 
 // Checar tamanho da string
-function checkLength(input){
-
-    const min = 3;
-    const max = 15;
+function checkLength(input, min, max){
 
     if(input.value.length < min){
         showError(input, `Esse campo deve ter no mínimo ${min} caracteres`)
@@ -88,10 +80,10 @@ form.addEventListener("submit", function(e){
 
     e.preventDefault();
     checkFields([username, email, password, password2]);
-    checkLength(username);
-    checkLength(password);
+    checkLength(username, 3, 15);
+    checkLength(password, 3, 15);
     checkEmail(email);
-    if(checkLength(password)){
+    if(checkLength(password, 3, 15)){
         checkPasswords(password, password2);
     }
 });
